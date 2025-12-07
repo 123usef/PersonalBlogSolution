@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - PersonalBlog</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> *@
+    
     <link rel="stylesheet" href="~/PersonalBlog.styles.css" asp-append-version="true" />
 </head>
 <body>
@@ -27,6 +28,12 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Post" asp-action="index">Posts</a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-dark " asp-controller="Category" asp-action="Index">Categories </a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-dark " asp-controller="Category" asp-action="Details"> Categories Details </a>
                         </li>
                     </ul>
                 </div>
