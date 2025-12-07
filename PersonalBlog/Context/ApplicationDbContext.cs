@@ -11,6 +11,7 @@ namespace PersonalBlog.Context
         {
             
         }
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             ////fluent Api

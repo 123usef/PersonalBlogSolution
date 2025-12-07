@@ -1,14 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PersonalBlog.Context;
 using PersonalBlog.Models;
 
 namespace PersonalBlog.Controllers
 {
     public class PostController : Controller
     {
+        private readonly ApplicationDbContext _context;
+        public PostController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
         // all posts 
         public IActionResult Index()
         {
-            return View();
+            var posts = _context.posts.ToList();
+            return View(posts);
         }
 
         // get one post by id 
